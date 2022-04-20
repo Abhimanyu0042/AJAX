@@ -10,7 +10,8 @@ function buttonClickHandler(){
     const xhr = new XMLHttpRequest();
     // Open Request
 
-    xhr.open('GET',"http://dummy.restapiexample.com/api/v1/employees",true)  
+    xhr.open('POST',"http://dummy.restapiexample.com/api/v1/create",true)  
+    xhr.getResponseHeader('Content-Type' , 'application/json');
     // when response is ready to deliver from server to client
     xhr.onprogress=function(){
         console.log("in progress....");
@@ -24,7 +25,14 @@ function buttonClickHandler(){
         if (this.status=== 200){
             let obj = JSON.parse(this.responseText);
             console.log(obj);
-        }
+        
+        //let lst = document.getElementById("list");
+        //str="";
+        //for(key in obj.data){
+        //    str+=`<li>$(obj.data[key].employee_name)</li>`;
+        //}
+        //lst.innerHTML = str;
+    }
         else{
             console.error("Some Error occured");
         }
