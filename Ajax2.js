@@ -38,7 +38,9 @@ function buttonClickHandler(){
         }
     }
     // send the request to the server
-    xhr.send();
+    prmtrs = '{"name":"Ram","salary":"12000","age":"25"}';
+    xhr.send(prmtrs);
+    console.log("work done......!")
 
 
 // Illutration of on ready state change functions
@@ -48,7 +50,5 @@ function buttonClickHandler(){
 // 2 HEADERS_RECEIVED - send() has been called and headers and statusare available
 // 3 LOADING - Downloading responseText holds partial data
 // 4 DONE - the operation is completed
-
-
 
 }
