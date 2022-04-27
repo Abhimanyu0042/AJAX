@@ -35,13 +35,13 @@ function buttonClickHandler() {
                     console.log("Login is Successful...!!");
                     break;
                 }
-                else {
-                    console.log("Login Declined...!!");
+                
+                
                 }
+                if (obj.Users[key].Username != input && obj.Users[key].Password != pass) {
+
+                    console.log("Login is Declined...!!");
             }
-        }
-        else {
-            console.error("Some Error occured");
         }
     }
     xhr.send();
